@@ -18,15 +18,15 @@ public class RevengeOfThePancakes {
      * @param start Start index
      * @param end   End index
      */
-    private void reverse(String pancakes, int start, int end) {
+    private String reverse(String pancakes, int start, int end) {
         for (int i = start; i < end; i++) {
             if (pancakes.charAt(i) == '+') {
                 pancakes = pancakes.substring(0, i) + '-' + pancakes.substring(i + 1);
             } else if (pancakes.charAt(i) == '-') {
                 pancakes = pancakes.substring(0, i) + '+' + pancakes.substring(i + 1);
             }
-
         }
+        return pancakes;
     }
 
     /**
@@ -54,7 +54,7 @@ public class RevengeOfThePancakes {
     public int serve(String pancakes) {
         int i = 0;
         while (!isHappy(pancakes)) {
-            reverse(pancakes, 0, getOppIndex(pancakes));
+            pancakes = reverse(pancakes, 0, getOppIndex(pancakes));
             i++;
         }
         return i;
