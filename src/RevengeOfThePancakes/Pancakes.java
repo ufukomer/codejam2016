@@ -1,8 +1,8 @@
 package RevengeOfThePancakes;
 
-public class RevengeOfThePancakes {
+public class Pancakes {
 
-    public RevengeOfThePancakes() {
+    public Pancakes() {
     }
 
     /**
